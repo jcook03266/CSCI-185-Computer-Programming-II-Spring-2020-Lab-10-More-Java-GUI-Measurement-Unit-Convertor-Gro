@@ -1,4 +1,5 @@
 import java.awt.FlowLayout;
+import javax.swing.JOptionPane;
 import java.awt.*;  
 import javax.swing.*;  
 import javax.swing.JButton; 
@@ -7,7 +8,6 @@ import javax.swing.JTextArea;
 import javax.swing.JFrame;
 import java.awt.*;
 import java.awt.event.*;
-
 //Written by Justin C. & Brenno H.
 //CSCI 185 M06
 //4/14/20
@@ -21,9 +21,10 @@ import java.awt.event.*;
 //for simplicity sake we will be using flowlayout as it operates on the basis of having entries start from left to right
 
 public class GUIMUC extends JFrame {
-JFrame f; //setting our JFrame variable
-public GUIMUC(){
-        // Contributed by Justin C
+    JFrame f; //setting our JFrame variable
+    JOptionPane pane = new JOptionPane();//creating a new pane
+    public GUIMUC(){
+        //Justin C.
         //New frame is enumerated 
         f = new JFrame();
 
@@ -34,7 +35,7 @@ public GUIMUC(){
         JTextField lbs = new JTextField();
         lbs.setPreferredSize(new Dimension(120, 20));//sets dimensions of the input box to 120 pixels by 20 H x V 
         //end
-        
+
         //Text Area, where the output from the user's input in generated
         JTextArea kgs = new JTextArea();
         kgs.setPreferredSize(new Dimension(120, 20));//same dimensions of the field box are used for the output
@@ -45,7 +46,7 @@ public GUIMUC(){
         f.add(new JLabel("Pound(s):")); f.add(lbs);
         f.add(new JLabel("Kg(s):")); f.add(kgs);
         //end
-        
+
         //Convert and clear buttons, their functions will be enumerated later through listeners, right now we're declaring and adding
         //them to our frame 
         JButton Convert = new JButton("Convert");
@@ -60,12 +61,12 @@ public GUIMUC(){
         f.setSize(270,260);//setting the default size of our window to 370 (H) pixels by 260 (V)
         f.setVisible(true);//making the window visible to the user
         //end
-        //Contributed by Justin C
+        //by Justin C.
 
     }
-    public static void main(){
+   public static void main(){
+        System.out.println("////////// Registry engaged //////////");//Spacing 
+        System.out.println("//////////////////////////////////////");//Spacing 
         new GUIMUC();//new object
-        
-        
     }
 }
