@@ -1,3 +1,4 @@
+import java.awt.FlowLayout;
 import java.awt.*;  
 import javax.swing.*;  
 import javax.swing.JButton; 
@@ -6,27 +7,65 @@ import javax.swing.JTextArea;
 import javax.swing.JFrame;
 import java.awt.*;
 import java.awt.event.*;
+
 //Written by Justin C. & Brenno H.
 //CSCI 185 M06
 //4/14/20
 //Spring 2020
-//Lab 10: Lab 10: More Java GUI: Measurement Unit Convertor (Group Work)
+//Lab 10: Lab 10: More Java GUI: Measurement Unit Converter (Group Work)
 //The following is a “Measurement Unit Convertor” application which can convert a numeric value from pound (lb) to kilogram (kg).
 //It also captures any exceptional situation (such as entering a String “abc” in the pound textField, etc.) 
 //using the exception handling concepts covered in previous lectures. 
 //Note: By looking at the graphical sample provided we can deduce that the necessary layouts required for this 
 //project's desired look are flowlayout and grid layout
 //for simplicity sake we will be using flowlayout as it operates on the basis of having entries start from left to right
-public class GUIMUC extends JFrame{
+
+public class GUIMUC extends JFrame {
+JFrame f; //setting our JFrame variable
 public GUIMUC(){
+        // Contributed by Justin C
+        //New frame is enumerated 
+        f = new JFrame();
 
+        //Title at the top of the window but not the header
+        f.add(new JLabel("Measurement Unit Converter"));  
 
+        //Text field, where the user enters their numeral inputs
+        JTextField lbs = new JTextField();
+        lbs.setPreferredSize(new Dimension(120, 20));//sets dimensions of the input box to 120 pixels by 20 H x V 
+        //end
+        
+        //Text Area, where the output from the user's input in generated
+        JTextArea kgs = new JTextArea();
+        kgs.setPreferredSize(new Dimension(120, 20));//same dimensions of the field box are used for the output
+        kgs.setEditable(false);//prevents user from using the text area as an entry box
+        //end
 
-}
+        //Labels are added alongside the text field and area field boxes
+        f.add(new JLabel("Pound(s):")); f.add(lbs);
+        f.add(new JLabel("Kg(s):")); f.add(kgs);
+        //end
+        
+        //Convert and clear buttons, their functions will be enumerated later through listeners, right now we're declaring and adding
+        //them to our frame 
+        JButton Convert = new JButton("Convert");
+        f.add(Convert); 
+        JButton Clear = new JButton("Clear");
+        f.add(Clear);
+        //end 
 
-public static void main(){
+        //our frame specifications 
+        f.setTitle("MUC V.1");//Adds title header that appears at the top of the page
+        f.setLayout(new FlowLayout(FlowLayout.RIGHT,40, 30));//setting the flow layout alignment to the right side of the window
+        f.setSize(270,260);//setting the default size of our window to 370 (H) pixels by 260 (V)
+        f.setVisible(true);//making the window visible to the user
+        //end
+        //Contributed by Justin C
 
-
-
-}
+    }
+    public static void main(){
+        new GUIMUC();//new object
+        
+        
+    }
 }
