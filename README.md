@@ -1,0 +1,2 @@
+# CSCI-185-Computer-Programming-II-Spring-2020-Lab-10-More-Java-GUI-Measurement-Unit-Convertor-Gro
+In this lab we will practice how to write a more advanced GUI program in Java in a group of 2-4 students. Please write a “Measurement Unit Convertor” application which can convert a numeric value from pound (lb) to kilogram (kg). Also you are supposed to capture any exceptional situation (such as entering a String “abc” in the pound textField, etc.) using the exception handling concept we covered in the previous lecture. 
