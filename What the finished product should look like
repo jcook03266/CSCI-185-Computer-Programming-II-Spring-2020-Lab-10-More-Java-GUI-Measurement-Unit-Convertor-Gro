@@ -57,8 +57,8 @@ public class GUIMUC extends JFrame {
 
         //our frame specifications 
         f.setTitle("MUC V.1");//Adds title header that appears at the top of the page
-        f.setLayout(new FlowLayout(FlowLayout.RIGHT,40, 30));//setting the flow layout alignment to the right side of the window
-        f.setSize(270,260);//setting the default size of our window to 370 (H) pixels by 260 (V)
+        f.setLayout(new FlowLayout(FlowLayout.RIGHT,30, 30));//setting the flow layout alignment to the right side of the window
+        f.setSize(270,260);//setting the default size of our window to 270 (H) pixels by 260 (V)
         f.setVisible(true);//making the window visible to the user
         //end
         //by Justin C.
